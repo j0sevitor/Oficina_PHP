@@ -3,6 +3,7 @@ require_once '../Components/cabecalho.php';
 $pagina = 'inicio';
 $acao = isset($_GET['a']) ? $_GET['a'] : 'noticias';
 
+require_once '../../App/Controller/InicioController.php';
 switch($acao){
     case 'detalhe':
         require_once 'Pages/detalhe.php';
