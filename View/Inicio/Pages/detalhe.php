@@ -1,12 +1,22 @@
-<div class="row">
+<div class="row mt-4">
     <div class="col-12">
+        <a href="index.php" class="btn btn-dark">Voltar</a>
         <div class="card">
-            <img class="card-img-top" src="https://www.impacta.com.br/blog/wp-content/uploads/2020/04/267896-como-anda-o-mercado-de-games-no-brasil-descubra-neste-post.jpg" alt="Card image cap">
+            <img class="card-img-top" src="<?= $item['image_link'] ?>" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h4 class="card-title"> <?= $item['titulo'] ?> </h4>
+                <h5 class="card-text"> <?= $item['assunto'] ?>.</h5>
+                <h6 class="card-subtitle mb-2 text-muted"> Categoria: <?= $item['nome'] ?></h6>
+                <h6 class="card-subtitle mb-2 text-muted"> Reporter: <?= $item['reporter'] ?></h6>
+                <h6 class="card-subtitle mb-2 text-muted"> Local: <?= $item['local'] ?></h6>
+                <h6 class="card-subtitle mb-2 text-muted"> Data: <?= date('d/m/Y', strtotime($item['criado_em'])) ?></h6>
+                <h6 class="card-subtitle mb-2 text-muted"> Hora: <?= date('H:i', strtotime($item['criado_em'])) ?></h6>
+                <p> <?=$item['descricao'] ?></p>
+                
+                <!--<a href="#" class="btn btn-primary">Descubra</a>-->
             </div>
         </div>
     </div>
 </div>
+
+https://www.impacta.com.br/blog/wp-content/uploads/2020/04/267896-como-anda-o-mercado-de-games-no-brasil-descubra-neste-post.jpg

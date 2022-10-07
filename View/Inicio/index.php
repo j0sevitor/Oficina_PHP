@@ -12,3 +12,5 @@ switch($acao){
         require_once 'Pages/noticias.php';
     break;
 }
+
+require_once '../Components/rodape.php';
